@@ -1,21 +1,21 @@
 language: node_js
 node_js:
-  - '4'
+- '4'
 deploy:
   provide: heroku
   api_key:
-    secure: B/mUEUlu/RzCBr5VsItSKWn491/cVRMshvJ9FsCp/EbeIndy6oJQk4ObD63NK2WxvH9Lu2VM368tUCSdhWmnIABbulJFM9GpWTgmAw9BjJ+B+O37dMaktQaBlvOVjajr3+xuaNjY5sjO+jaRiMPzMYmV7yv2OP+bTmYqE/KG57hxZqDC93iGph3q3DOznCPyfEP2eo3942dm4d98UZItL57WdrZ31MVFwnh41go86+4FtnF0lcdBY3DrB/E4y9u693wVd93lfe3EGe/o/o7yn+gF+Xys6IGryzoltzgKdtL8FYIGZDgjSzQ/+YjEbJHMC48N4yW84a66JAmYjK46wAHzZWk2LSTxxeUCyvqqYQgPtNWqELu6Uvy9pQuvajMlMSj0Hj+YrQTC1PxPYJ4ylpLKrgVBQQs/phsiCYk01WChF1hgjsivLQoQdFWk4jUoYoNSTrw7MEk6sdrL0rmiWnscJTxYMS1NF4yZSSWNUWjg4gUay1WeYCrLke+XlpkBwMMZIjwpy9iBWioohl0FAoFPgMAvzVIGjK3ksnmursqm1VXTWTTGNxLC/ufhO9ZNybKNIW0/EzP+fmivOa1AN8Trv/vntw9e00LaFVE8SBbslxFn36dJFhGRHNoc9ImY+x6xIS/kVGrnsf/9e9fSgXkBTLNNc8aTHkOCnKRzHrc=
+    secure: foJxJ2GsqRco9UqlQ4U2IXUVhpMrM1h4Tcf493lqIy1po8Ex45tzkzLxpnvDT43NNKFPL0Yn84UFZEDlQUzglsnGwIXoOJqBnsEr7NNyLOGk0YPIjpzhf9ahKesEREa65EXQp2cyUxwoJafr6DUmS1tDSatGFt+DrSWWva/3LpdUheLsqRe/Vxc2TrjBnI4NIvTWboO7j2t140ebJ+AaknbA+dMBFPBD2Be2wogHv8K5JViRAuogvGDd7aabxmK8A0HUCMIft3sH/9j/BQmtR/IL4feSt3UJOGGJ/x6kFZGVo02wL+ryeCRlNw4BvCmh79iK5u4yKPmr39A5VYnr7LWgcKdKQiYGp6U75WWvQBixPvVthYaT7DdrAgq7Zl8/KLbNyNHqlkpowORT5p/PeCEOE663mCO8Z7CYc9JxlfeyxL+c1LMPDwlHQ3UpqrWb2devN0NWxAFMCY3JHbU6ufLhp6Y42hbfvbnRvWpZD5OoH6hZAy8bB6apGK4vD6agWzn53K/kjXVizhyKw6cs804LLwkwDHqmK0YKcvOdPs/B1t8Lf5klmDjMEDIorObjbGXg0/Ve9IPo6qkLRa8Ph6qnktBUSETThosEY949iPDRabeY2lh3x3RQ4hfOUfTWZoUIAwkkp8bF592p6+wfJ307BMWhcofRxcSZvf9Gc90=
   app: zazcartest
   strategy: api
   on:
     all_branches: true
   before_install:
-    - npm config set spin false
-    - npm install -g npm@^2
+  - npm config set spin false
+  - npm install -g npm@^2
   install:
-    - npm install
+  - npm install
   script:
-    - npm run test
+  - npm run test
   run:
-    - webpack --progress -p
-    - npm start
+  - webpack --progress -p
+  - npm start
