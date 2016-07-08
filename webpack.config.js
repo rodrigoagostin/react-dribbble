@@ -18,10 +18,6 @@ module.exports = {
   },
   resolve: {
     extensions: ['', '.js', '.jsx']
-  },
-  devServer: {
-    historyApiFallback: true,
-    contentBase: './',
-    port: process.env.PORT || 4000
   }
+  
 };
