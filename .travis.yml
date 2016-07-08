@@ -19,5 +19,7 @@ deploy:
   script:
     - npm run test
   run:
+    - "rake db:migrate"
+    - "rake cleanup"
     - webpack --progress -p
     - npm start
