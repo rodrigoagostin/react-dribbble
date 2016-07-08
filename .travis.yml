@@ -5,10 +5,7 @@ deploy:
   provide: heroku
   api_key:
     secure: asdas
-  app: zazcartest
-  strategy: api
   on:
-    all_branches: true
     repo: rodrigoagostin/react-dribbble
   before_install:
   - npm config set spin false
