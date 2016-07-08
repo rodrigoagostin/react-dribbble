@@ -1,0 +1,126 @@
+body {
+  background-color: #f2f2f2;
+  padding-top: 10px;
+}
+
+a { color: #ffa726; }
+a:hover { color: #ffa726; text-decoration: none; opacity: 0.6; }
+
+.header_text h1 {
+  color: #212121;
+  font-family: 'Lobster', sans-serif !important;
+  text-transform: capitalize;
+  border-bottom: 1px solid #ccc;
+  font-size: 4em;
+  margin: 0;
+}
+
+.thumbnail img {
+  width: 100%;
+}
+
+.card-list {
+  margin-top: 1em;
+}
+
+.thumbnail {
+  border-radius: 0;
+  position: relative;
+  padding: 0;
+  box-shadow: 0 0 10px #ccc;
+  cursor: pointer;
+}
+
+.thumbnail .caption {
+  padding: 5;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.8);;
+  width: 100%;
+}
+
+.thumbnail .caption:hover > .description {
+  display: block;
+}
+
+.thumbnail .caption .row { margin: 0; padding: 0; }
+
+.thumbnail .caption > .description {
+  display: none;
+  color: #fff;
+  font-weight: 100;
+  position: relative;
+  height: 140px;
+  padding: 14px;
+}
+
+.thumbnail .caption > .description span {
+  height: 90px;
+  overflow: auto;
+  float: none;
+}
+
+.thumbnail .caption > .description img {
+  max-width: 50px;
+  display: block;
+  margin: 0 auto;
+}
+
+.thumbnail .caption > .description .tags-description {
+  font-size: 10px;
+  color: #ccc;
+}
+
+.thumbnail .caption h3 {
+  float: left;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  font-family: 'Helvetica Neue';
+  font-weight: lighter;
+  max-width: 270px;
+}
+
+.thumbnail .caption span {
+  float: right;
+  color: #ccc;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.thumbnail .caption span i {
+  margin-right: 5px;
+}
+
+.thumbnail .description a:hover {
+  text-decoration: none;
+  opacity: 0.4;
+}
+
+.back-to-home {
+  color: #555;
+  font-size: 10px;
+}
+
+.back-to-home:hover {
+  color: #555;
+  opacity: 0.6;
+  text-decoration: none;
+}
+
+.back-to-home i { font-size: 9px; }
+
+.image-hidpi img { width: 100%; }
+
+.description-row {
+  padding: 20px 0;
+}
+
+.description-row .content {
+  padding: 20px 5px;
+  font-family: 'Helvetica Neue';
+  font-weight: 200;
+  font-size: 18px;
+}
