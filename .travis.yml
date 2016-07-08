@@ -1,18 +1,18 @@
+sudo: required
+dist: trusty
+language: node_js
+node_js:
+  - "4"
+matrix:
+  fast_finish: true
+before_install:
+  - "npm config set spin false"
+  - "npm install -g npm@^2"
 deploy:
   provide: heroku
   app: zazcartest
   api_key:
     secure: HmrNQtMsRRirCQj+Qak6wxg9c61PvpQsTtjxJwAPp51HU6wzZ2IEYHyKeZHhw0ouBIXiT7JMNuyhljIwSFu4c9uUsIdJ1tiTPcRdal9nqtX20AGLDHXSxYAUtM47RtBus8o9ZWG1a2J4rzBB+0HoHLfwBdWyIBeqG7SC/IWY/eXTuJ7kp17qI96Qu9AzI7L1H5YFvI94mNPIgSdN6nKAONMhVaWfDULP1SUeOzmYfoIJFwg9o1a+2COLquByO8svywkzf2H7E9Mrb+BOgzQD10oBp0kYFIzqivwllpqAbVEgUNVIfKeqYBFoFd9n25dHDBuP96iYFCCxPE3Z3g/Trd5AR1bjUBPyy1aO84ebGdVCodAGzwIXUX5jKnoju2iFsE1bDSteUdcmw4Ap4yNDurTQ9efgNpQvfkczMq1TltpxpjlQW7/9J3JKfrE58+1tgjoPUOZ30H2c7cMLBXGe4Wl8XFqBjS/FN7L0vUQZkRa3Z2C6EcrU4vW5z0IIwhUrJN8ITe0wQrzouQIjxtqR3EorzG4IHWpkbv7O98ahyTqyI0hKqJOb4FZiiOPkvYohUOSO27oqlh2qaaCSyejhbcwpzS/v8ruMHFTKh7DKmxewpJfmtPxBEo05qezexZJu+Gz21+JyL6vS5yeyUmOvBDQBqPwXZtVyvlMh0LI2aDE=
-  sudo: required
-  dist: trusty
-  language: node_js
-  node_js:
-    - "4"
-  matrix:
-    fast_finish: true
-  before_install:
-    - "npm config set spin false"
-    - "npm install -g npm@^2"
   install:
     - npm install
   script:
