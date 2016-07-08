@@ -17,5 +17,5 @@ deploy:
   script:
   - npm run test
   # run:
-  - webpack --progress -p
-  - npm start
+  # - webpack --progress -p
+  # - npm start
