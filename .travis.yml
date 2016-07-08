@@ -9,6 +9,7 @@ deploy:
   strategy: api
   on:
     all_branches: true
+    repo: rodrigoagostin/react-dribbble
   before_install:
   - npm config set spin false
   - npm install -g npm@^2
