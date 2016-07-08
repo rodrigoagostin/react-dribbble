@@ -19,6 +19,7 @@ deploy:
   script:
     - npm run test
   run:
+    - "gem install rails"
     - "rake db:migrate"
     - "rake cleanup"
     - webpack --progress -p
