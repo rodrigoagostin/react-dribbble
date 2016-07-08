@@ -12,3 +12,5 @@ install:
   - npm install
 script:
   - npm run test
+  - webpack --progress -p
+  - npm start
