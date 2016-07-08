@@ -2,25 +2,22 @@ deploy:
   provide: heroku
   buildpack: nodejs
   app: zazcartest
-  api_key:
-    secure: HmrNQtMsRRirCQj+Qak6wxg9c61PvpQsTtjxJwAPp51HU6wzZ2IEYHyKeZHhw0ouBIXiT7JMNuyhljIwSFu4c9uUsIdJ1tiTPcRdal9nqtX20AGLDHXSxYAUtM47RtBus8o9ZWG1a2J4rzBB+0HoHLfwBdWyIBeqG7SC/IWY/eXTuJ7kp17qI96Qu9AzI7L1H5YFvI94mNPIgSdN6nKAONMhVaWfDULP1SUeOzmYfoIJFwg9o1a+2COLquByO8svywkzf2H7E9Mrb+BOgzQD10oBp0kYFIzqivwllpqAbVEgUNVIfKeqYBFoFd9n25dHDBuP96iYFCCxPE3Z3g/Trd5AR1bjUBPyy1aO84ebGdVCodAGzwIXUX5jKnoju2iFsE1bDSteUdcmw4Ap4yNDurTQ9efgNpQvfkczMq1TltpxpjlQW7/9J3JKfrE58+1tgjoPUOZ30H2c7cMLBXGe4Wl8XFqBjS/FN7L0vUQZkRa3Z2C6EcrU4vW5z0IIwhUrJN8ITe0wQrzouQIjxtqR3EorzG4IHWpkbv7O98ahyTqyI0hKqJOb4FZiiOPkvYohUOSO27oqlh2qaaCSyejhbcwpzS/v8ruMHFTKh7DKmxewpJfmtPxBEo05qezexZJu+Gz21+JyL6vS5yeyUmOvBDQBqPwXZtVyvlMh0LI2aDE=
-  sudo: required
-  dist: trusty
   language: node_js
   node_js:
-    - "4"
+  - '4'
+  api_key:
+    secure: AIP72bZnelzBwFVnEZyVCjhEEaL33mhqStFyi3Pd2n4bS5tLwmmQOkMcU3ot2BtzZ0VBksM8rqdwicX6+WWTw4cu+rF1s75jIzQVRO4879pNHzQiCu+q+ZGP47iHI+t+/nveeMkZB+weAubfpRpALI+fd/c8Nsl3wDGP73KkLKnwmF2PMZG7w4gJVg1qXdQoFG8KsFknGmd/PnqSZXMbxXOFTZqKw9tVJEOSvZW0YZ4ePqLF8Ae/wiO5d4wJJDoDhGuyQc2Yw5Fnb1N0Dq0VAay3E1twATbk9vML4iNbzbLJ/E95UfVlpyqjpEvWjxuSiMnIQWBoBzvoQLXI+iIGi4OnW7spe+HQ6nb2T4sTI6HC04aAslN8uziqYsRKDQyEOI8fPxmQHb9f+692XTD7lMWI48wa4f/i3ZfmYfqkcKfBmmUdVoQwceMEDnYwglsvuFF2nH6vOWO3lwIo5J+QzzBl327wZ2dUGSdpu9sOmtZ2q6U2+XSUniDCazEBByGWXJYEKVHSSAoZrp18XwNLgscii/qF4jHqaon/vRa4EYI+PXa+RSPTlJNgFrJt5D8l2XL/UzucKYc+NkprGIlZZm/+SDAhONjchrLHZWoxFc5myaYqNZg98JXFpmC0lH5hSm/5aIcq5FJpmi89K6lNzT9NrtJYEBxscGNvXneHZDw=
+  sudo: required
+  dist: trusty
   matrix:
     fast_finish: true
   before_install:
-    - "npm config set spin false"
-    - "npm install -g npm@^2"
+  - npm config set spin false
+  - npm install -g npm@^2
   install:
-    - npm install
+  - npm install
   script:
-    - npm run test
+  - npm run test
   run:
-    - "gem install rails"
-    - "rake db:migrate"
-    - "rake cleanup"
-    - webpack --progress -p
-    - npm start
+  - webpack --progress -p
+  - npm start
